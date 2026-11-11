@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.build/
+venv/
+env/
+.venv/
+.tox/
+.coverage
+htmlcov/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker
+.dockerinit
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swa
+*~
+
+# OS
+.DS_Store
+/node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Quick Resume Maker specific
+chroma_db/
+*.docx
+*.pdf

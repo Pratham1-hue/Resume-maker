@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quick-resume-maker"
+version = "0.1.0"
+description = "AI-powered resume tailor: ingest candidate profile → align to job description → export polished resume"
+authors = [
+    { name = "Quick Resume Maker", email = "quick@resumemaker.example" }
+]
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "pydantic[email]>=2.7.0",
+    "pydantic-settings>=2.2.0",
+    "python-dotenv>=1.0.0",
+    "python-multipart>=0.0.6",
+    "chromadb>=1.0.0",
+    "sentence-transformers>=3.0.0",
+    "soxr>=0.3.0",
+    "httpx>=0.27.0",
+    "beautifulsoup4>=4.12.0",
+    "playwright>=1.40.0",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.0",
+    "python-docx>=1.1.0",
+    "docxtpl>=0.16.0",
+    "reportlab>=4.2.0",
+    "email-validator>=2.0.0",
+    "anthropic>=0.40.0",
+    "google-generativeai>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "httpx[http2]",
+]
+
+[tool.fastapi]
+prefix = "/api/v1"
+
+# The importable Python package is `app` and it lives under backend/.
+[tool.setuptools.packages.find]
+where = ["backend"]
+include = ["app*"]
